@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>test task</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="main_login_container">
+    <div class="login-card">  
+      <main class="login-content">
+        <h1 class="login-welcome-text">Welcome Back!</h1>
+        <form method="post" class="login-form" id="myForm">
+          <input type="text" autofocus placeholder="Account Username" name="username" class="login-input">
+          <input type="password" placeholder="Password" name="password" class="login-input">
+          <input type="submit" name="submit" placeholder="Log in" class="login-btn">
+        </form>
+      </main>
+    </div>
+  </div>
+  <div id="main_container">
+    <div id="productList">
+      <div>
+        <label for="sort">sort by price</label>
+        <input type="checkbox" id="sort">
+      </div>
+      <div>
+        <label for="filter">filter cytrus</label>
+        <input type="checkbox" id="filter">
+      </div>
+      <div>
+        <button onclick="showLastProducts()">show last products</button>
+      </div>
+      <div class="pagination">
+        <div class="pagination-block">
+          <span class="pageButton outline-none" id="button_prev">Prev</span>
+          <span id="page_number" class="outline-none"></span>
+          <span class="pageButton outline-none" id="button_next">Next</span>
+        </div>
+      </div>
+    </div>
+    <div id="lastProducts">
+      <button class="pull-left" onclick="showProductList()">back</button>
+    </div>
+    <div id="currentProduct">
+      <div class="current_product_card">
+        <img id="current_product_img" src="" alt="">
+        <div class="product_info">
+          <div id="current_product_title" class="align_center bold"></div>
+          <div id="current_product_description" class="m-1"></div>
+          <div>
+            <button class="pull-left" onclick="showProductList()">back</button>
+            <button class="pull-right" onclick="addToChart()">add to chart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart">
+      <ul id="chartList">
+      </ul>
+      <div class="list_footer">
+        <button class="pull-left" onclick="showProductList()">back to list</button>
+        <button class="pull-right" onclick="alert('create order')">create order</button>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
